@@ -1,0 +1,1 @@
+{"name":"Local: 9_pD","url":"d:\\cpp\\apcsc\\9_pD.cpp","tests":[{"id":1727527940082,"input":"3 4\n1 2\n2 4\n1 2\n1 2 3 4","output":""},{"id":1727527969639,"input":"3 5\n1 5\n3 2\n1 4\n1 2 4 10 11","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\apcsc\\9_pD.cpp","group":"local","local":true}

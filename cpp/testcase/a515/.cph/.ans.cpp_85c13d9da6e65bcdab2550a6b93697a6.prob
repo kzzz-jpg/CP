@@ -1,0 +1,1 @@
+{"name":"Local: ans","url":"d:\\cpp\\testcase\\a514\\ans.cpp","tests":[{"id":1729001277688,"input":"5 5 6\n1 2 3\n2 3 4\n3 4 5\n4 5 6\n3 1 1\n2 1 2\n1 1\n1 2\n2 1 2\n1 3\n2 1 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\testcase\\a514\\ans.cpp","group":"local","local":true}

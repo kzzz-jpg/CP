@@ -1,0 +1,1 @@
+{"name":"Local: a078","url":"d:\\cpp\\cchs\\a078.cpp","tests":[{"id":1729777268820,"input":"1\n5\nA B C D E\nB A B C D\nC B A B C\nD C C A B\nE D C B A","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\cchs\\a078.cpp","group":"local","local":true}

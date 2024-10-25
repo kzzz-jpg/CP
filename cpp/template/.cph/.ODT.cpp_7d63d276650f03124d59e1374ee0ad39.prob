@@ -1,0 +1,1 @@
+{"name":"Local: ODT","url":"d:\\cpp\\template\\ODT.cpp","tests":[{"id":1728902315238,"input":"10 10 7 9\n","output":""},{"id":1728903474829,"input":"10 10 9 9\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\template\\ODT.cpp","group":"local","local":true}

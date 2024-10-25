@@ -1,0 +1,1 @@
+{"name":"Local: a272","url":"d:\\cpp\\cchs\\a272.cpp","tests":[{"id":1729516330428,"input":"2\n100 200","output":""},{"id":1729516340563,"input":"6\n4 3 1 6 5 0","output":""},{"id":1729516346349,"input":"10\n975 187 0 7912 23 456 90 1 975 12","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\cchs\\a272.cpp","group":"local","local":true}

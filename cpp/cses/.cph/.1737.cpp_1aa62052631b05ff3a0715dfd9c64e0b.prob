@@ -1,0 +1,1 @@
+{"name":"Local: 1737","url":"d:\\cpp\\cses\\1737.cpp","tests":[{"id":1728478110251,"input":"5 6\n2 3 1 2 5\n3 1\n2 1 1 5\n2 2 1 5\n1 2 2 5\n2 1 1 5\n2 2 1 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\cses\\1737.cpp","group":"local","local":true}

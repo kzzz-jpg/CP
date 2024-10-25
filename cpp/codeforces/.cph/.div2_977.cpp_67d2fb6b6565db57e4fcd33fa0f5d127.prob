@@ -1,0 +1,1 @@
+{"name":"Local: div2_977","url":"d:\\cpp\\codeforces\\div2_977.cpp","tests":[{"id":1728204325600,"input":"3\n4 2 0\n1 2 3 4\n1 1\n3 6 0\n1 2 3\n1 1 2 3 3 2\n4 6 0\n3 1 4 2\n3 1 1 2 3 4\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\codeforces\\div2_977.cpp","group":"local","local":true}

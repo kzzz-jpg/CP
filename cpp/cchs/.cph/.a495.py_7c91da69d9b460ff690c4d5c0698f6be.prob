@@ -1,0 +1,1 @@
+{"name":"Local: a495","url":"d:\\cpp\\cchs\\a495.py","tests":[{"id":1729346553348,"input":"5 3\n1 4 2\n2 5 3\n3 4 -4","output":""},{"id":1729346588780,"input":"5 3\n1 4 2\n2 5 3\n3 4 -5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\cchs\\a495.py","group":"local","local":true}

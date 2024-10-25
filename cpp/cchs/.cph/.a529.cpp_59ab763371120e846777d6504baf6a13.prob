@@ -1,0 +1,1 @@
+{"name":"Local: a529","url":"d:\\cpp\\cchs\\a529.cpp","tests":[{"id":1729693551896,"input":"90\n85","output":""},{"id":1729693561139,"input":"95\n110","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\cchs\\a529.cpp","group":"local","local":true}

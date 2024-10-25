@@ -1,0 +1,1 @@
+{"name":"Local: p2","url":"d:\\cpp\\yok939\\p2.cpp","tests":[{"id":1727843004629,"input":"5 5\n1 2\n2 3\n3 4\n4 5\n1 5","output":""},{"id":1727843075735,"input":"4 6\n1 2\n1 3\n1 4\n2 3\n2 4\n3 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\yok939\\p2.cpp","group":"local","local":true}

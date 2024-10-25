@@ -1,0 +1,1 @@
+{"name":"Local: 854","url":"d:\\cpp\\ntucpc\\854.cpp","tests":[{"id":1727785874304,"input":"5 6 11\n1 5 8\n-7 -3 4\n6 9 6\n11 15 7\n11 13 4\n","output":""},{"id":1727786075399,"input":"5 6 11\n-6 0 6\n-2 4 6\n6 12 6\n10 16 6\n8 11 6\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\ntucpc\\854.cpp","group":"local","local":true}

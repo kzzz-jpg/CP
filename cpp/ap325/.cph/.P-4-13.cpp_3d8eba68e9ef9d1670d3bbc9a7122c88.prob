@@ -1,0 +1,1 @@
+{"name":"Local: P-4-13","url":"d:\\cpp\\ap325\\P-4-13.cpp","tests":[{"id":1728727351684,"input":"8\n4 12 -17 5 8 -2 7 -3","output":""},{"id":1728727357868,"input":"3\n-1 -1 -1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\ap325\\P-4-13.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: java","url":"d:\\cpp\\cchs\\java.java","tests":[{"id":1729515503061,"input":"7 20","output":"Outside"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\cchs\\java.java","group":"local","local":true}

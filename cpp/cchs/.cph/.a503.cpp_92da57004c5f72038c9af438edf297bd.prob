@@ -1,0 +1,1 @@
+{"name":"Local: a503","url":"d:\\cpp\\cchs\\a503.cpp","tests":[{"id":1729309713717,"input":"1971 ","output":""},{"id":1729309723179,"input":"1800 ","output":""},{"id":1729309756543,"input":"464188413455","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\cchs\\a503.cpp","group":"local","local":true}

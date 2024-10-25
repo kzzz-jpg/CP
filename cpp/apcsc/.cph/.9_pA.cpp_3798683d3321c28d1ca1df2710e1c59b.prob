@@ -1,0 +1,1 @@
+{"name":"Local: 9_pA","url":"d:\\cpp\\apcsc\\9_pA.cpp","tests":[{"id":1727528635431,"input":"4\n1 A+\n2 A\n3 B\n4 C","output":""},{"id":1727528645055,"input":"5\n1 A+\n2 A\n3 B\n4 C\n1 A","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\cpp\\apcsc\\9_pA.cpp","group":"local","local":true}
