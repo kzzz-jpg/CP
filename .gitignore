@@ -1,7 +1,4 @@
-/CP/cpp/testcase/*
-
-/CP/cpp/i_do_not_care/*
-
-/CP/cpp/.cpp/*
-
-/CP/cpp/.vscode/*
+cpp/i_do_not_care/*
+cpp/.vscode/*
+cpp/.cph/*
+cpp/online judge/*
