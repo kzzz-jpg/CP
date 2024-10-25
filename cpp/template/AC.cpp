@@ -1,36 +1,57 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-const int mx = 2e5+5;
-
-struct trie {
-    int s[mx][30], cnt=0;
-    int data[mx];
-    
-    void insert(string& st) {
-        int now = 0;
-        for (int i=0;i<st.size();i++) {
-            int c = st[i] - 'a';    
-            if (!s[now][c]) s[now][c] = ++cnt;
-            now = s[now][c];
+int cnt=0;
+vector<vector<int>> trie(2005000,vector<int> (26,0)),g(2000500);
+vector<int> ed(2005000),fail(2000500,0),ti(2000500,0);
+void insrt(int i,string s){
+    int u=0;
+    for(auto x:s){
+        if(trie[u][x-'a']==0){
+            trie[u][x-'a']=++cnt;
         }
-        data[now] = 1;
+        u=trie[u][x-'a'];
     }
-
-    bool query(string& st) {
-        int now = 0;
-        for (int i=0;i<st.size();i++) {
-            int c = st[i] - 'a';
-            if (!s[now][c]) return 0;
-            now = s[now][c];
+    ed[i]=u;
+    return;
+}
+void setF(){
+    queue<int> q;
+    for(int i=0;i<26;i++){
+        if(trie[0][i]) q.push(trie[0][i]);
+    }
+    while(q.size()){
+        auto tp=q.front();q.pop();
+        for(int i=0;i<26;i++){
+            if(trie[tp][i]==0){
+                trie[tp][i]=trie[fail[tp]][i];
+            }else{
+                fail[trie[tp][i]]=trie[fail[tp]][i];
+                q.push(trie[tp][i]);
+            }
         }
-        return data[now] == 1;
     }
-}t;
-
-int main() {
-    string s="abc";
-    string ss = "ab";
-    cout << t.query(s) << "\n";
-    t.insert(s);
-    cout << t.query(s) << " " << t.query(ss) << "\n";
+}
+void dfs(int x,int par){
+    for(auto u:g[x]){
+        if(u!=par){
+            dfs(u,x);
+            ti[x]+=ti[u];
+        }
+    }
+}
+int main(){
+    string a,b;
+    cin>>a>>b;
+    insrt(1,b);
+    setF();
+    int nw=0;
+    for(auto x:a){
+        nw=trie[nw][x-'a'];
+        ti[nw]++;
+    }
+    for(int i=1;i<=cnt;i++){
+        g[fail[i]].push_back(i);
+    }
+    dfs(0,0);
+    cout<<ti[ed[1]]<<'\n';
 }
