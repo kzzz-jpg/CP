@@ -19,8 +19,8 @@ signed main(){
 			ev nw;
 			if(i&(1<<j)){
 				nw=dp[i&(~(1<<j))];
-				if(nw.pe+a[i]>w) nw.ti++,nw.pe=a[i];
-				else nw.pe+=a[i];
+				if(nw.pe+a[j]>w) nw.ti++,nw.pe=a[j];
+				else nw.pe+=a[j];
 			}
 			dp[i]=min(dp[i],nw);
 		}
