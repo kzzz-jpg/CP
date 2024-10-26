@@ -15,7 +15,7 @@ using namespace std;
 random_device rd;
 mt19937 rg(rd());
 #define int long long
-uniform_int_distribution<>dist(-1000000,1000000);
+uniform_int_distribution<>dist(-10000,10000);
 
 int dentra(int y,int d,int num){
 
@@ -61,7 +61,7 @@ retans ans;
 int ansday;
 int nwbest;
 void sa(){
-	double T=5000,ed=1e-6,low=0.98;
+	double T=100,ed=1e-6,low=0.98;
 	for(;T>ed;T*=low){
 		int chg=max(min((int)(dist(rg)*T),(int)1e6),(int)-1e6);
 		nwbest+=chg;
@@ -88,7 +88,7 @@ signed main(){
 			D[i][j]+=D[i-1][j]+D[i][j-1]-D[i-1][j-1];
 		}
 	}
-	while(double(clock())/CLOCKS_PER_SEC<0.8) sa();
+	while(double(clock())/CLOCKS_PER_SEC<0.9) sa();
 	cout<<ansday<<'\n';
 	cout<<ans.x1<<' '<<ans.y1<<' '<<ans.x2<<' '<<ans.y2<<'\n';
 }
