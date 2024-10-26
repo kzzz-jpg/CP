@@ -1,32 +1,20 @@
-#include<iostream>
-#pragma GCC optimize("Ofast,inline,unroll-loops,no-stack-protector,fast-math")
+#include<bits/stdc++.h>
 using namespace std;
-char readchar() {
-	const int S = 1<<15; // buffer size
-	static char buf[S], *p = buf, *q = buf;
-	if(p == q && (q = (p=buf)+fread(buf,1,S,stdin)) == buf) return EOF;
-	return *p++;
-}
-int nextint() {
-	int x = 0, c = readchar(), neg = false;
-	while(('0' > c || c > '9') && c!='-' && c!=EOF) c = readchar();
-	if(c == '-') neg = true, c = readchar();
-	while('0' <= c && c <= '9') x = x*10 + (c^'0'), c = readchar();
-	if(neg) x = -x;
-	return x; // returns 0 if EOF
-}
-inline void output(int _x){
-    if(!_x) putchar('0');
-    char _buff[20]; int _f = 0;
-    while(_x > 0)
-    {
-        _buff[_f++] = _x%10+'0';
-        _x /= 10;
-    }
-    for(_f-=1; _f >= 0; _f--)
-        putchar(_buff[_f]);
-    putchar('\n');
-}
-int main(){
-    cout<<min(double(100000),4.22442)<<'\n';
+using 教嗎？ = int;
+#define 虛無 0
+#define 世界的起點 1
+教嗎？ main(){
+	    教嗎？ Chung好電,Cheng也好電;
+	          cin >> Chung好電 >> Cheng也好電;
+		        vector<教嗎？> 教授好強(Cheng也好電+世界的起點,虛無);
+			      while(Chung好電--){
+				              教嗎？ 吃布丁,Chung我婆,我不會寫程式;
+					                cin >> 吃布丁 >> Chung我婆 >> 我不會寫程式;
+							          if(吃布丁==世界的起點){
+									              教授好強[我不會寫程式] += Chung我婆;
+										              }else{
+												                  教授好強[我不會寫程式] = max(虛無,教授好強[我不會寫程式]-Chung我婆);
+														          }
+								      }
+			            for(教嗎？ 要組一輩子的樂團嗎 = 世界的起點;要組一輩子的樂團嗎<=Cheng也好電;要組一輩子的樂團嗎++) cout << 教授好強[要組一輩子的樂團嗎] << " \n"[要組一輩子的樂團嗎==Cheng也好電];
 }
