@@ -1,0 +1,1 @@
+{"name":"Local: a228","url":"d:\\CP\\cpp\\zerojudge\\a228.cpp","tests":[{"id":1730018192746,"input":"3\n6 3\n1 1 1\n1 0 1\n1 1 1\n1 1 1\n1 0 1\n1 1 1\n2 4\n1 1 1 1\n1 1 1 1\n1 1\n0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\zerojudge\\a228.cpp","group":"local","local":true}
