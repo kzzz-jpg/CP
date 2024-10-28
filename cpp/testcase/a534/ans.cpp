@@ -2,12 +2,12 @@
 using namespace std;
 template<class T>
 class Prime{
-    #define N (int)1e8+9
+    #define N (int)1e7+9
     public:
         vector<T> list;
         void init(T n){
-            eular(n);
-            //eratosthenes(n);
+            //eular(n);
+            eratosthenes(n);
         }
     private:
         bitset<N> notprime;//1e8<2^27=128MB
