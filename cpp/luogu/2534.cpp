@@ -2,10 +2,9 @@
 using namespace std;
 int a[17];
 int ans=999,dd,n;
-bool vs[17];
 int ev(){
 	int ret=0;
-	for(int i=2;i<=n;i++) if(a[i]-a[i-1]!=1) ret++;
+	for(int i=2;i<=n;i++) if(abs(a[i]-a[i-1])!=1) ret++;
 	return ret;
 }
 vector<int> aans;
@@ -13,20 +12,17 @@ void dfs(int stp){
 	int e=ev();
 	if(e==0){
 		ans=min(stp,ans);
-		for(auto xx:aans) cout<<xx<<' ';
+		for(auto x:aans) cout<<x<<' ';
 		cout<<'\n';
 		return;
 	}
 	if(stp+e>dd) return;
 	for(int i=2;i<=n;i++){
-		if(vs[i]) continue;
-		aans.push_back(i);
 		reverse(a+1,a+i+1);
-		vs[i]=1;
+		aans.push_back(i);
 		dfs(stp+1);
-		vs[i]=0;
-		reverse(a+1,a+1+i);
 		aans.pop_back();
+		reverse(a+1,a+1+i);
 	}
 }
 signed main(){
