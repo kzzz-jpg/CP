@@ -1,11 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long
-int hd[200500],nxt[200500],to[200500],w[200500];
-int dis[200500];
+#define inf 9e8
+int hd[205],nxt[20050],to[20050],w[20050];
+int dis[205];
 int cnt=2;
 int n,m,s,t,ans;
-int nw[200500];
+int nw[205];
 void addE(int a,int b,int v){
 	nxt[cnt]=hd[a];
 	to[cnt]=b;
@@ -18,7 +19,7 @@ void addE(int a,int b,int v){
 	hd[b]=cnt++;
 }	
 bool bfs(){
-	for(int i=1;i<=n;i++) dis[i]=99999;
+	for(int i=1;i<=n;i++) dis[i]=inf;
 	queue<int> q;
 	q.push(s);
 	dis[s]=1;
@@ -27,7 +28,7 @@ bool bfs(){
 		auto tp=q.front();q.pop();
 		for(int e=hd[tp];e;e=nxt[e]){
 			if(w[e]==0) continue;
-			if(dis[to[e]]!=99999) continue;
+			if(dis[to[e]]!=inf) continue;
 			dis[to[e]]=dis[tp]+1;
 			nw[to[e]]=hd[to[e]];
 			q.push(to[e]);
@@ -44,7 +45,7 @@ int dfs(int x,int sum){
 		if(w[e]==0) continue;
 		if(dis[to[e]]-dis[x]!=1) continue;
 		k=dfs(to[e],min(sum,w[e]));
-		if(k==0) dis[to[e]]=99999;
+		if(k==0) dis[to[e]]=inf;
 		w[e]-=k;
 		w[e^1]+=k;
 		res+=k;
@@ -53,6 +54,8 @@ int dfs(int x,int sum){
 	return res;
 }
 signed main(){
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
 	cin>>n>>m>>s>>t;
 	int x,y,v;
 	for(int i=0;i<m;i++){
@@ -60,7 +63,7 @@ signed main(){
 		addE(x,y,v);
 	}
 	while(bfs()){
-		ans+=dfs(s,999999);
+		ans+=dfs(s,inf);
 	}
 	cout<<ans<<'\n';
 }
