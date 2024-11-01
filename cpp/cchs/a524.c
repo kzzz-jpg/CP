@@ -26,7 +26,9 @@ const int P=10009;
 int n,m,a[100500];
 int main(){
 	n=nextint(),m=nextint();
-	for(int i=1;i<=n;i++)a[i]=nextint(),(a[i]=a[i]+a[i-1])%P;
+	for(int i=1;i<=n;i++){
+		a[i]=nextint(),a[i]=(a[i]+a[i-1])%P;
+	}
 	int l,r;
 	while(m--){
 		l=nextint(),r=nextint();
