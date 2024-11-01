@@ -57,7 +57,7 @@ signed main(){
 		cin>>x>>y;
 		addE(x,y);
 	}
-	for(int i=1;i<=n;i++) if(!lev[x]) tarjan(x);
+	for(int i=1;i<=n;i++) if(!lev[i]) tarjan(i);
 	cnt=1;
 	for(int i=1;i<=n;i++){
 		for(int e=hd[i];e;e=nxt[e]){
@@ -73,7 +73,7 @@ signed main(){
 		auto tp=q.front();q.pop();
 		ans=max(ans,mx[tp]+bhpt[tp]);
 		for(int e=bhd[tp];e;e=bnxt[e]){
-			mx[bto[e]]=max(mx[bto[e]],bhpt[x]+mx[x]);
+			mx[bto[e]]=max(mx[bto[e]],bhpt[tp]+mx[tp]);
 			if(--deg[bto[e]]==0) q.push(bto[e]);
 		}
 	}
