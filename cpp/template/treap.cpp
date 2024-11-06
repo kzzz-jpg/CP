@@ -7,7 +7,6 @@ mt19937 rg(rd());
 struct Treap{
     Treap *l=nullptr,*r=nullptr;
     int v,size,pri;
-    bool alive;
     Treap(int x): size(1),pri(rg()),v(x) {};
     void pull();
     void push();
