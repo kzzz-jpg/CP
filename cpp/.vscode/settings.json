@@ -1,6 +1,6 @@
 {
     "background.fullscreen": {
-      "images": ["https://cdn.discordapp.com/attachments/1180535428462432291/1275455991697113098/image.png?ex=66c69d35&is=66c54bb5&hm=69b79142604f789d88ae600deeff7fc819ab6ca8b9790475a3382e9724d7b714&"], // urls of your images
+      "images": ["https://codeforces.com/userpic.codeforces.org/3754687/title/6c15a09b2946739b.jpg"], // urls of your images
       "opacity": 1, // 0.85 ~ 0.95 recommended
       "size": "cover", // also css, `cover` to self-adaption (recommended)，or `contain`、`200px 200px`
       "position": "center", // alias to `background-position`, default `center`
