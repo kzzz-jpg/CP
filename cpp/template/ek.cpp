@@ -5,7 +5,7 @@ int hd[200500],nxt[200500],to[200500],w[200500];
 bool vs[200500];
 int pre[200500];
 int dis[200500];
-int flag[500][500];
+int flag[501][501];
 int cnt=2;
 int s,t;
 int n,m,ans;
@@ -50,7 +50,8 @@ void upd(){
 	ans+=dis[t];
 }
 signed main(){
-	cin>>n>>m>>s>>t;
+	cin>>n>>m;
+	s=1,t=n;
 	int x,y,v;
 	for(int i=0;i<m;i++){
 		cin>>x>>y>>v;

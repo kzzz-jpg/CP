@@ -2,11 +2,11 @@
 using namespace std;
 #define int long long
 #define inf 9e8
-int hd[205],nxt[20050],to[20050],w[20050];
-int dis[205];
+int hd[505],nxt[20050],to[20050],w[20050];
+int dis[505];
 int cnt=2;
 int n,m,s,t,ans;
-int nw[205];
+int nw[505];
 void addE(int a,int b,int v){
 	nxt[cnt]=hd[a];
 	to[cnt]=b;
@@ -56,7 +56,8 @@ int dfs(int x,int sum){
 signed main(){
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
-	cin>>n>>m>>s>>t;
+	cin>>n>>m;
+	s=1,t=n;
 	int x,y,v;
 	for(int i=0;i<m;i++){
 		cin>>x>>y>>v;
