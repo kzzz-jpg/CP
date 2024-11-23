@@ -1,20 +1,73 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-using 教嗎？ = int;
-#define 虛無 0
-#define 世界的起點 1
-教嗎？ main(){
-	    教嗎？ Chung好電,Cheng也好電;
-	          cin >> Chung好電 >> Cheng也好電;
-		        vector<教嗎？> 教授好強(Cheng也好電+世界的起點,虛無);
-			      while(Chung好電--){
-				              教嗎？ 吃布丁,Chung我婆,我不會寫程式;
-					                cin >> 吃布丁 >> Chung我婆 >> 我不會寫程式;
-							          if(吃布丁==世界的起點){
-									              教授好強[我不會寫程式] += Chung我婆;
-										              }else{
-												                  教授好強[我不會寫程式] = max(虛無,教授好強[我不會寫程式]-Chung我婆);
-														          }
-								      }
-			            for(教嗎？ 要組一輩子的樂團嗎 = 世界的起點;要組一輩子的樂團嗎<=Cheng也好電;要組一輩子的樂團嗎++) cout << 教授好強[要組一輩子的樂團嗎] << " \n"[要組一輩子的樂團嗎==Cheng也好電];
+
+int chartoi(char c){
+    int i = c - '0';
+    return i;
+}
+char itochar(int i){
+    char c = i + '0';
+    return c;
+}
+void zero(char c[]){
+    for(int i=0;i<21;i++){
+        c[i] = '0';
+    }
+}
+
+int main(int argc, char* argv[]) {
+    
+    // string str1;
+    // str1 = argv[1];
+    // ifstream cin("input1.txt"); 
+    
+    string c,d;
+    while(cin >> c >> d){
+        if(c=="0"&&d=="0") break;
+
+        char a[22],b[22]; zero(a); zero(b);
+
+        stringstream ss;
+        int a1=c.size(); ss << c;
+        while(ss>>a[21-a1]) a1--;
+		ss.str("");
+        ss.clear(); 
+        int b1=d.size(); ss << d; 
+        while(ss>>b[21-b1]) b1--;
+		ss.str("");
+        ss.clear();
+
+        int carry = 0; int sum = 0; 
+        char result[22]; zero(result);
+        for(int i=20;i>=0;i--){
+            sum += chartoi(a[i])+chartoi(b[i])+carry;
+            if(sum>=10){
+                carry = 1;
+                sum -= 10;
+                result[i] = itochar(sum);
+            }
+            else{
+                carry = 0;
+                result[i] = itochar(sum);
+            }
+            sum = 0;
+        }
+        if(result[0]!='0'){
+            cout << "Overflow!" << endl;
+        }
+        else{
+            int len;
+            for(int i=0;i<21;i++){
+                if(result[i]!='0'){
+                    len = i; break;
+                }
+            }
+            cout << "A + B = ";
+            for(int i=len;i<21;i++){
+                cout << result[i];
+            }
+            cout << endl;
+        }
+    }
+    return 0;
 }

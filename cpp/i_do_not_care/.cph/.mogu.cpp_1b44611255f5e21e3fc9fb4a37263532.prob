@@ -1,0 +1,1 @@
+{"name":"Local: mogu","url":"d:\\CP\\cpp\\i_do_not_care\\mogu.cpp","tests":[{"id":1732336177836,"input":"3\n2 2 2\n1 1 1\n0 0 0\n1 0 0\n0 1 0\n0 0 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\i_do_not_care\\mogu.cpp","group":"local","local":true}
