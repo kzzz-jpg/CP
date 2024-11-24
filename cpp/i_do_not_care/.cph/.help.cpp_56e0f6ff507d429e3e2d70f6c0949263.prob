@@ -1,1 +1,1 @@
-{"name":"Local: help","url":"d:\\CP\\cpp\\i_do_not_care\\help.cpp","tests":[{"id":1732275968607,"input":"123\n456","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\i_do_not_care\\help.cpp","group":"local","local":true}
+{"name":"Local: help","url":"d:\\CP\\cpp\\i_do_not_care\\help.cpp","tests":[{"id":1732414812874,"input":"1\n2","output":""},{"id":1732415078677,"input":"3\n2\n10\n1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\i_do_not_care\\help.cpp","group":"local","local":true}
