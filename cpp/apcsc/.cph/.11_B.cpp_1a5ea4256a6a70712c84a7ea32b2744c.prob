@@ -1,0 +1,1 @@
+{"name":"Local: 11_B","url":"d:\\CP\\cpp\\apcsc\\11_B.cpp","tests":[{"id":1732973069955,"input":"1 1000\n1 1101","output":""},{"id":1732973080583,"input":"3 3000\n0 3000\n1 2000\n0 1000","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\apcsc\\11_B.cpp","group":"local","local":true}

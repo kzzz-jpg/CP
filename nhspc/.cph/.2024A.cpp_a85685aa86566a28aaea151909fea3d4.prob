@@ -1,0 +1,1 @@
+{"name":"Local: 2024A","url":"d:\\CP\\nhspc\\2024A.cpp","tests":[{"id":1733018378913,"input":"3 4\n1 3 3\n5 2 3 1\n4 1 2 0\n","output":""},{"id":1733018614058,"input":"6 4\n11 20 14 30 5 1\n1 2 4 5\n0 3 4 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\nhspc\\2024A.cpp","group":"local","local":true}

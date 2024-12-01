@@ -9,4 +9,4 @@ for __ in range(t):
     if b == 0:
         print(a)
     else:
-        print(b-1)
+        print(b)
