@@ -13,5 +13,8 @@ signed main(){
     for(int i=2;i<=n;i++){
         ans[i]=min(b[i],ans[i-1]+d[i-1]);
     }
+    for(int i=n-1;i;i--){
+            ans[i]=min(b[i],ans[i+1]+d[i]);
+    }
     for(int i=1;i<=n;i++) cout<<ans[i]<<' ';
 }
