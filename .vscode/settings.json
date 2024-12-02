@@ -13,6 +13,7 @@
         "initializer_list": "cpp",
         "utility": "cpp",
         "xutility": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "algorithm": "cpp"
     }
 }

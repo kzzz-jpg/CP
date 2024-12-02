@@ -1,0 +1,1 @@
+{"name":"Local: abc298e","url":"d:\\CP\\cpp\\atcoder\\abc298e.cpp","tests":[{"id":1733138870469,"input":"4 2 3 3 2\n","output":""},{"id":1733139619040,"input":"6 4 2 1 1\n","output":""},{"id":1733139625124,"input":"100 1 1 10 10\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\atcoder\\abc298e.cpp","group":"local","local":true}
