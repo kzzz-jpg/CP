@@ -46,4 +46,5 @@ signed main(){
             }
     }
     sort(qry.begin(),qry.end());
+    for(auto x:)
 }

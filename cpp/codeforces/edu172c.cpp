@@ -1,45 +1,24 @@
 #include<bits/stdc++.h>
 #define int long long
 using namespace std;
-int chk(int x,vector<char> &a,int zr,int oe){
-    int lv=0,ret=0;
-    int i=0;
-    for(;i<a.size();i++){
-        if(a[i]=='1'&&oe>zr) break;
-        else if(a[i]=='1') oe--;
-        else if(a[i]=='0') zr--;
-    }
-    if(i==0) i++;
-    for(;i<a.size();i++){
-        if(a[i]=='1'){
-            if(lv<x-1) lv++;
-            ret+=lv;
-        }else{
-            ret-=lv;
-        }
-    }
-    return ret;
-}
 void solve(){
-    int n,k;
-    cin>>n>>k;
-    vector<char> a(n);
-    int zr=0,oe=0;
-    for(int i=0;i<n;i++){
-        cin>>a[i];
-        if(a[i]=='0') zr++;
-        else oe++;
-    }
-    if(chk(n,a,zr,oe)<k){
-        cout<<-1<<'\n';
-        return;
-    }
-    int ans=1;
-    for(int j=n;j;j>>=1){
-        while(ans+j<=n&&chk(ans+j,a,zr,oe)<k) ans+=j;
-    }
-    ans++;
-    cout<<ans<<'\n';
+        int n,k;
+        cin>>n>>k;
+        string s;
+        cin>>s;
+        vector<int> suf(n);
+        int sub=0;
+        for(int i=n-1;i>=0;i--){
+                suf[i]+=sub;
+                sub+=s[i]=='1'?1:-1;
+        }
+        sort(suf.begin(),suf.end(),greater<int>());
+        int nw=0,ans=1;
+        for(int i=0;i<n;i++){
+                if(nw<k&&suf[i]>0) nw+=suf[i],ans++;
+        }
+        if(nw<k) cout<<-1<<'\n';
+        else cout<<ans<<'\n';
 }
 signed main(){
     int t;
