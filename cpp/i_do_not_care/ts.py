@@ -1,31 +1,12 @@
-while True:
-    try:
-        x=int(input())
-        y=list(str(input()))
-        z=int(input())
-        bb=0
-        cc=[]
-        for i in range(z):
-            aa=int(input())
-            try:
-                y[aa-1]='1'
-            except:
-                aa=1
-        for i in y:
-            if i=='1':
-                bb=bb+1
-            else:
-                if bb>0:
-                    cc.append(bb)
-                bb=0
-        if bb>0:
-            cc.append(bb)
-        gg=max(cc)
-        kk=min(cc)
-        #if kk==gg:
-        #    print(kk)
-        #else:
-        print(kk)
-        print(gg)
-    except EOFError:
-        break
+x=int(input())
+y=list(map(int,input().split(" ")))
+friend=[0]*x #0表還沒
+gg=0
+for i in range(x):
+  if friend[i]==0:
+    have_friend=i
+    while friend[have_friend]==0:
+        friend[have_friend]=1 #1表有了
+        have_friend=y[have_friend]
+    gg=gg+1
+print(gg)
