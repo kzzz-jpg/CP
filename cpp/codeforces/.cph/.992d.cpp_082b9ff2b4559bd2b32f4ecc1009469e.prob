@@ -1,0 +1,1 @@
+{"name":"Local: 992d","url":"d:\\CP\\cpp\\codeforces\\992d.cpp","tests":[{"id":1734093634507,"input":"2\n5\n1 2\n2 3\n2 4\n3 5\n7\n1 2\n1 3\n2 4\n3 5\n3 6\n3 7\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\codeforces\\992d.cpp","group":"local","local":true}

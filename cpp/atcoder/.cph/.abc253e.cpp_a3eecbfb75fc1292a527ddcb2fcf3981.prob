@@ -1,0 +1,1 @@
+{"name":"Local: abc253e","url":"d:\\CP\\cpp\\atcoder\\abc253e.cpp","tests":[{"id":1734010363441,"input":"2 3 1\n","output":""},{"id":1734010425169,"input":"3 3 2\n","output":""},{"id":1734010431116,"input":"100 1000 500\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\atcoder\\abc253e.cpp","group":"local","local":true}
