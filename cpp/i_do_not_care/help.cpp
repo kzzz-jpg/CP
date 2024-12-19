@@ -1,53 +1,51 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-int n;
-vector<string> ptr(1002);
-bool visited[1002][1002];
-vector<vector<int>> road;
-int dx[]={-1,1,0,0};
-int dy[]={0,0,-1,1};
-bool dfs(int x,int y,int endx,int endy){
-    if(x<0 or x>=n or y<0 or y>=n or ptr[x][y]=='#' or visited[x][y])
-        return false;
-    visited[x][y]=true;
-    road.push_back({x,y});
-    if(x==endx and y==endy)
-        return true;
-    for(int i=0;i<4;i++){
-        int nx=x+dx[i],ny=y+dy[i];
-        if(dfs(nx,ny,endx,endy))
-            return true;
-    }
-    road.pop_back();
-    return false;
+#define int long long
+struct node{
+    int x, y, s;
+};
+vector<int> boss(210, 0), sz(210, 1);
+int find(int x) {
+    if(boss[x]==x) return x;
+    return boss[x] = find(boss[x]); 
 }
-int main(){
-    int homex,homey,endx,endy;
+void Union(int a, int b) {  
+    int fa= find(a), fb=find(b);   
+    if(fa==fb) return;  
+    if(sz[fb] > sz[fa]) swap(fa, fb);
+    sz[fa]+=sz[fb];
+    boss[fb]=fa;
+}
+bool same(int a, int b) {
+    return find(a)==find(b);
+}
+signed main() {
+    int n, a, b, c;
     cin>>n;
-    for(int i=0;i<n;i++)
-        cin>>ptr[i];
-    cin>>homex>>homey;
-    int t;
-    cin>>t;
-    for(int i=0;i<t;i++){
-    int maxx;
-    cin>>endx>>endy>>maxx;;
-    memset(visited,false,sizeof(visited));
-    road.clear();
-    dfs(homex,homey,endx,endy);
-    int totalroad=road.size()-1;
-    if(totalroad<=maxx){
-        cout<<"I like to move it move it\n";
-        int stop=min(totalroad, max(0,maxx-totalroad));
-        cout<<road[totalroad-stop][0]<<" "<<road[totalroad-stop][1];
+    vector<node> v(n, {0, 0, 0});
+    for(int i=0;i<n;i++) {
+        cin>>a>>b>>c;
+        v[i].x=a, v[i].y=b, v[i].s=c;
     }
-    else{
-         cout<<"Too tired\n";
-         cout<<road[maxx][0]<<" "<<road[maxx][1];
+    vector<tuple<int, int, int>> edge;
+    for(int i=0;i<n;i++) {
+        for(int j=i+1;j<n;j++) {
+            int t=abs(v[i].x-v[j].x)+abs(v[i].y-v[j].y);
+            cerr<<t/v[i].s+(t%v[i].s>=1)<<' '<<t/v[j].s+(t%v[j].s>=1)<<'\n';
+            edge.push_back({t/v[i].s+(t%v[i].s>=1), i, j});
+            edge.push_back({t/v[j].s+(t%v[j].s>=1), j, i});
+        }
     }
-    if(i!=t-1){
-        cout<<endl;
+    int mx=0;
+    sort(edge.begin(), edge.end());
+    for(int i=0;i<=n;i++) boss[i]=i;
+    for(auto [w, st, nd]:edge) {
+        if(!(same(st, nd))) {
+            cerr<<w<<'\n';
+            Union(st, nd);
+            mx=max(w, mx);
+        }
     }
-    }
-
+    cout<<mx;
 }
+
