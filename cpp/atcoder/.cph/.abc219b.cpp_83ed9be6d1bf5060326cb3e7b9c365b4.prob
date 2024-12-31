@@ -1,0 +1,1 @@
+{"name":"Local: abc219b","url":"d:\\CP\\cpp\\atcoder\\abc219b.cpp","tests":[{"id":1735301113737,"input":"mari\nto\nzzo\n1321\n","output":""},{"id":1735301123334,"input":"abra\ncad\nabra\n123\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\atcoder\\abc219b.cpp","group":"local","local":true}

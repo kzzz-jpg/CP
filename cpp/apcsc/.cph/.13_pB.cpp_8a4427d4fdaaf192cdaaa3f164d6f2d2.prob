@@ -1,0 +1,1 @@
+{"name":"Local: 13_pB","url":"d:\\CP\\cpp\\apcsc\\13_pB.cpp","tests":[{"id":1735356924187,"input":"5 5 2 0\n1 1\n\n5 5\n\n","output":""},{"id":1735357137572,"input":"5 5 1 3\n1 1\nRRD","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\apcsc\\13_pB.cpp","group":"local","local":true}
