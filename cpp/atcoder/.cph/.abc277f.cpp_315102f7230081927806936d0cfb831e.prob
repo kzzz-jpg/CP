@@ -1,0 +1,1 @@
+{"name":"Local: abc277f","url":"d:\\CP\\cpp\\atcoder\\abc277f.cpp","tests":[{"id":1735662128943,"input":"3 3\n9 6 0\n0 4 0\n3 0 3\n","output":""},{"id":1735662180007,"input":"2 2\n2 1\n1 2\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\atcoder\\abc277f.cpp","group":"local","local":true}

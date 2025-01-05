@@ -1,0 +1,1 @@
+{"name":"Local: abc387a","url":"d:\\CP\\cpp\\atcoder\\abc387a.cpp","tests":[{"id":1735992032411,"input":"30 25\n","output":""},{"id":1735992041477,"input":"45 11\n","output":""},{"id":1735992045293,"input":"2025 1111\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\atcoder\\abc387a.cpp","group":"local","local":true}
