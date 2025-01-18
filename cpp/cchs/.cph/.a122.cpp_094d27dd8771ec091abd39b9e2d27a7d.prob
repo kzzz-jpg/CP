@@ -1,0 +1,1 @@
+{"name":"Local: a122","url":"d:\\CP\\cpp\\cchs\\a122.cpp","tests":[{"id":1736168818386,"input":"10 10\n0 1\n9 8\n#0#$#$##0#\n000000#00#\n0#0$#0##0#\n0$00000000\n#+0$#0#$$#\n0000#0000#\n0#~#=#=#0#\n0000#00000\n0~###0###0\n0000#0000#","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\cchs\\a122.cpp","group":"local","local":true}

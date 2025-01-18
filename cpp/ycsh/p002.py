@@ -1,0 +1,1 @@
+print((lambda n,q:(lambda x,a,t,nw:[[nw.append([x[nw[-1]-1],(nw[-1]-1+a[nw[-1]-1])%n+1][t[i]-1] )for i in range(q)],nw][-1][-1])(list(map(int,input().split())),list(map(int,input().split())),list(map(int,input().split())),[1]))(*map(int,input().split())))

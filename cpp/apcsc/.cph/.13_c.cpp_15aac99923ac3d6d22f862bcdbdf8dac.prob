@@ -1,0 +1,1 @@
+{"name":"Local: 13_c","url":"d:\\CP\\cpp\\apcsc\\13_c.cpp","tests":[{"id":1736427605788,"input":"2 3 3\n2/59\n9/22\n19/2","output":""},{"id":1736427845175,"input":"4 5 5\n2/5\n1/62\n1/8\n114514/9999991\n2/59","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\apcsc\\13_c.cpp","group":"local","local":true}

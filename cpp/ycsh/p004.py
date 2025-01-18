@@ -1,0 +1,1 @@
+print('\n'.join(str(' '.join(str(y) for y in x))for x in (lambda s:[[char,sum(1 for c in s if c==char)]for char in 'abcdefghijklmnopqrstuvwxyz'])(list(input()))))

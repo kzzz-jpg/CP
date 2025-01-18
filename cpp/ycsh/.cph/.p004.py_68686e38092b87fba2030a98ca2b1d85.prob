@@ -1,0 +1,1 @@
+{"name":"Local: p004","url":"d:\\CP\\cpp\\ycsh\\p004.py","tests":[{"id":1737181354510,"input":"abcdefghijklmnopqrstuvwxyz","output":""},{"id":1737182224910,"input":"abcdefg","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\ycsh\\p004.py","group":"local","local":true}

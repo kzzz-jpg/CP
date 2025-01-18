@@ -1,0 +1,1 @@
+{"name":"Local: java13C","url":"d:\\CP\\cpp\\apcsc\\java13C.java","tests":[{"id":1736430665809,"input":"2 3 3\n2/59\n9/22\n19/2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\apcsc\\java13C.java","group":"local","local":true}

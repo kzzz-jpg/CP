@@ -1,0 +1,1 @@
+print('\n'.join((lambda n:str(0 if n==666 else n-1000 if n>=4000 else n-250 if n>=1000 else n-125 if n>=500 else n-25 if n>=100 else n))(int(input()))for _ in range(int(input()))))
