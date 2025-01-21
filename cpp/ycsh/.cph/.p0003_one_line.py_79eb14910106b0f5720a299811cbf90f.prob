@@ -1,0 +1,1 @@
+{"name":"Local: p0003_one_line","url":"d:\\CP\\cpp\\ycsh\\p0003_one_line.py","tests":[{"id":1737194456915,"input":"3 3\n1 1 1\n1 5\n3 9\n1 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\ycsh\\p0003_one_line.py","group":"local","local":true}
