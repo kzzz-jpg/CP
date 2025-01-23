@@ -21,4 +21,3 @@ signed main() {
   while (t--)
     solve();
 }
-for (int i = 1; i <= n; i++)
