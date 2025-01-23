@@ -1,0 +1,1 @@
+{"name":"Local: 5_d","url":"d:\\CP\\cpp\\themeCP\\5_d.cpp","tests":[{"id":1737638522027,"input":"10\n9\n1\n2\n3\n4\n5\n6\n10\n1434\n1000000\n","output":""},{"id":1737638800730,"input":"1\n5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\themeCP\\5_d.cpp","group":"local","local":true}

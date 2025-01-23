@@ -1,27 +1,30 @@
 #include <bits/stdc++.h>
 #define int long long
 using namespace std;
-int n, lv[200500], del;
-int dfs(int x, map<int, bool> &mp) {
-  if (mp[x])
-    return 0;
-  if (x <= 0)
-    return 0;
-  if (x == 1)
-    return 1;
-  mp[x] = 1;
-  del = lower_bound(lv + 1, lv + 1 + 2023, x) - lv;
-  return x * x + dfs(x - del, mp) + dfs(x - del + 1, mp);
-}
+int dp[2050][2050];
+pair<int,int> pos[1000500];
+int n;
 void solve() {
-  map<int, bool> mp;
-  cin >> n;
-  cout << dfs(n, mp) << '\n';
+  cin>>n;
+  //cerr<<1<<'\n';
+  //cerr<<pos[n].first<<' '<<pos[n].second<<'\n';
+  cout<<dp[pos[n].first][pos[n].second]<<'\n';
 }
 signed main() {
-  int t = 1;
-  for (int i = 1; i <= 2023; i++)
-    lv[i] = lv[i - 1] + i;
+  int cnt=2;
+  dp[1][1]=1;
+  pos[1]={1,1};
+  for(int i=2;i<=2023;i++){
+    for(int j=1;j<=i;j++){
+     // if(i==1415) cerr<<i<<' '<<j<<'\n';
+      dp[i][j]=dp[i-1][j]+dp[i-1][j-1]-dp[i-2][j-1]+cnt*cnt;
+      if(cnt>=1000100) break;
+      pos[cnt++]={i,j};
+    }
+   // cerr<<i<<'\n';
+  }
+//  cerr<<1<<'\n';
+  int t = 0;
   cin >> t;
   while (t--)
     solve();
