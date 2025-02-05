@@ -1,0 +1,6 @@
+--2025-02-05 14:04:12--  https://marketplace.visualstudio.com/_apis/public/gallery/publishers/agrawal-d/cph/vsextensions/latest/vapackage
+Resolving marketplace.visualstudio.com (marketplace.visualstudio.com)... 2620:1ec:a92::175, 13.107.42.18
+Connecting to marketplace.visualstudio.com (marketplace.visualstudio.com)|2620:1ec:a92::175|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2025-02-05 14:04:12 ERROR 404: Not Found.
+
