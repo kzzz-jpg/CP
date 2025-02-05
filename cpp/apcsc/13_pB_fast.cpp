@@ -21,7 +21,6 @@ signed main(){
         if(i<=k/2) mnx+=x[i],mny+=y[i];
         else mxx+=x[i],mxy+=y[i];
     }
-    cerr<<mxx<<' '<<mnx<<' '<<mxy<<' '<<mny<<'\n';
     for(int i=1;i<=k;i++) cerr<<x[i]<<" \n"[i==k];
     for(int i=1;i<=k;i++) cerr<<y[i]<<" \n"[i==k]; 
     cout<<(mxx-mnx)+(mxy-mny)<<'\n';
