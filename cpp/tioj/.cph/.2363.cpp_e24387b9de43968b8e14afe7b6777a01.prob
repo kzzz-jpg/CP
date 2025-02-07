@@ -1,0 +1,1 @@
+{"name":"Local: 2363","url":"d:\\CP\\cpp\\tioj\\2363.cpp","tests":[{"id":1738852819870,"input":"3 2 8\n1 3 4\n4 2\n","output":""},{"id":1738852832982,"input":"3 2 9\n3 4 1\n4 2","output":""},{"id":1738852839992,"input":"0 4 61\n3 5 23 30\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\tioj\\2363.cpp","group":"local","local":true}

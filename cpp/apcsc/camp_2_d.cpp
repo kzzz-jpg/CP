@@ -12,25 +12,26 @@ void addE(int a,int b){
   to[cnt]=b;
   hd[a]=cnt++;
 }
-bool comp(int a,int b){
-  return A[a]<=A[b];
-}
 void dfs(int x,int par){
-  int it=lower_bound(lis.begin(),lis.end(),x,comp)-lis.begin();
+  int it=lower_bound(lis.begin(),lis.end(),A[x])-lis.begin();
   if(it==lis.size()) {
-    lis.push_back(x);
+    lis.push_back(A[x]);
     pos[x]=it;
+    nt[x]=-1e18;
   }else{
     nt[x]=lis[it];
-    lis[it]=x;
+    lis[it]=A[x];
     pos[x]=it;
   }
-  ans=max(ans,(int)lis.size());
+  if((int)lis.size()>ans) {
+    //for(auto xx:lis) cerr<<xx<<' ';cerr<<'\n';
+    ans=(int)lis.size();
+  }
   for(int e=hd[x];e;e=nxt[e]){
     if(to[e]==par) continue;
     dfs(to[e],x);
   }
-  if(nt[x]==0){
+  if(nt[x]==-1e18){
     lis.pop_back();
   }else{
     lis[pos[x]]=nt[x];
