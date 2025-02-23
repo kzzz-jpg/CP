@@ -28,8 +28,7 @@ inline void putc(const char &x) {
     flush();
   buffer[++p1] = x;
 }
-inline int max(int a, int b) { return a < b ? b : a; }
-inline void wrtn(long long x) {
+inline void wrtn(int x) {
   static char buf[15];
   static int len = -1;
   if (x >= 0) {
@@ -46,21 +45,47 @@ inline void wrtn(long long x) {
     putc(buf[len]), --len;
   }
 }
+short a[100010];
 int n;
-int a[1000500];
-long long x, y, ans;
-signed main() {
+short q[100010], s[100010];
+int ql, qr, sr;
+inline void solve() {
+  ql = 1;
+  qr = sr = 0;
   n = nextint();
   for (int i = 1; i <= n; i++)
-    a[i] = nextint();
-  x = nextint(), y = nextint();
-  for (int i = 1, r = 1; i <= n; i = r + 1, r = i) {
-    while (r + 1 <= n && (a[r + 1] - a[r] + 1) * x + y <= 2 * (x + y)) {
-      r++;
+    q[++qr] = i, a[i] = nextint();
+  for (int i = 1; i <= n; i++) {
+    if (sr && s[sr] == a[i]) {
+      sr--;
+    } else {
+      if (ql > qr) {
+        putc('N');
+        putc('o');
+        putc('\n');
+        return;
+      }
+      while (ql <= qr && (sr == 0 || s[sr] != a[i])) {
+        s[++sr] = q[ql++];
+      }
+      if (sr == 0 || s[sr] != a[i]) {
+        putc('N');
+        putc('o');
+        putc('\n');
+        return;
+      } else {
+        sr--;
+      }
     }
-    ans += (a[r] - a[i] + 1) * x + y;
   }
-  wrtn(ans);
+  putc('Y');
+  putc('e');
+  putc('s');
   putc('\n');
+}
+signed main() {
+  int t = nextint();
+  while (t--)
+    solve();
   flush();
 }

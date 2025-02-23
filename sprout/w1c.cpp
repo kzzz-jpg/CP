@@ -28,8 +28,7 @@ inline void putc(const char &x) {
     flush();
   buffer[++p1] = x;
 }
-inline int max(int a, int b) { return a < b ? b : a; }
-inline void wrtn(long long x) {
+inline void wrtn(int x) {
   static char buf[15];
   static int len = -1;
   if (x >= 0) {
@@ -46,21 +45,51 @@ inline void wrtn(long long x) {
     putc(buf[len]), --len;
   }
 }
-int n;
-int a[1000500];
-long long x, y, ans;
+struct Llist {
+  int l, r;
+} ls[200500];
+int n, t, ft;
+inline void print() {
+  for (int i = ft;; i = ls[i].r) {
+    wrtn(i), putc(" \n"[ls[i].r == 0]);
+    if (ls[i].r == 0)
+      break;
+  }
+}
 signed main() {
   n = nextint();
-  for (int i = 1; i <= n; i++)
-    a[i] = nextint();
-  x = nextint(), y = nextint();
-  for (int i = 1, r = 1; i <= n; i = r + 1, r = i) {
-    while (r + 1 <= n && (a[r + 1] - a[r] + 1) * x + y <= 2 * (x + y)) {
-      r++;
-    }
-    ans += (a[r] - a[i] + 1) * x + y;
+  t = nextint();
+  for (int i = 1; i <= n; i++) {
+    ls[i].l = i - 1;
+    ls[i].r = i + 1;
   }
-  wrtn(ans);
-  putc('\n');
+  ls[n].r = 0;
+  ls[1].l = 0;
+  ft = 1;
+  int L, R, op, x;
+  while (t--) {
+    op = nextint();
+    x = nextint();
+    if (op == 0) {
+      ls[ls[x].r].l = ls[x].l;
+      ls[ls[x].l].r = ls[x].r;
+      if (ls[ls[x].r].l == 0)
+        ft = ls[x].r;
+    } else {
+      if (x == ft)
+        continue;
+      L = ls[ls[x].l].l, R = ls[x].r;
+      ls[L].r = x;
+      ls[ls[x].l].r = R;
+      ls[ls[x].l].l = x;
+      ls[R].l = ls[x].l;
+      ls[x].r = ls[x].l;
+      ls[x].l = L;
+      if (ls[x].l == 0)
+        ft = x;
+    }
+    ls[0].l = ls[0].r = 0;
+  }
+  print();
   flush();
 }

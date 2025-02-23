@@ -1,4 +1,6 @@
 #include <cstdio>
+int t, l, op, n, r;
+int q[100010];
 inline char readchar() {
   const int S = 1 << 20; // buffer size
   static char buf[S], *p = buf, *q = buf;
@@ -28,8 +30,7 @@ inline void putc(const char &x) {
     flush();
   buffer[++p1] = x;
 }
-inline int max(int a, int b) { return a < b ? b : a; }
-inline void wrtn(long long x) {
+inline void wrtn(int x) {
   static char buf[15];
   static int len = -1;
   if (x >= 0) {
@@ -46,21 +47,27 @@ inline void wrtn(long long x) {
     putc(buf[len]), --len;
   }
 }
-int n;
-int a[1000500];
-long long x, y, ans;
 signed main() {
-  n = nextint();
-  for (int i = 1; i <= n; i++)
-    a[i] = nextint();
-  x = nextint(), y = nextint();
-  for (int i = 1, r = 1; i <= n; i = r + 1, r = i) {
-    while (r + 1 <= n && (a[r + 1] - a[r] + 1) * x + y <= 2 * (x + y)) {
-      r++;
+  t = nextint();
+  l = 1, r = 0;
+  while (t--) {
+    op = nextint();
+    if (op == 1) {
+      n = nextint();
+      q[++r] = n;
+    } else {
+      if (l <= r)
+        wrtn(q[l++]), putc('\n');
+      else {
+        putc('e');
+        putc('m');
+        putc('p');
+        putc('t');
+        putc('y');
+        putc('!');
+        putc('\n');
+      }
     }
-    ans += (a[r] - a[i] + 1) * x + y;
   }
-  wrtn(ans);
-  putc('\n');
   flush();
 }

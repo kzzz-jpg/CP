@@ -28,7 +28,6 @@ inline void putc(const char &x) {
     flush();
   buffer[++p1] = x;
 }
-inline int max(int a, int b) { return a < b ? b : a; }
 inline void wrtn(long long x) {
   static char buf[15];
   static int len = -1;
@@ -46,21 +45,35 @@ inline void wrtn(long long x) {
     putc(buf[len]), --len;
   }
 }
-int n;
-int a[1000500];
-long long x, y, ans;
-signed main() {
+struct st {
+  int v, cnt;
+} s[1000010];
+int t, r, n;
+long long ans;
+inline void solve() {
+  r = 0, ans = 0;
   n = nextint();
-  for (int i = 1; i <= n; i++)
-    a[i] = nextint();
-  x = nextint(), y = nextint();
-  for (int i = 1, r = 1; i <= n; i = r + 1, r = i) {
-    while (r + 1 <= n && (a[r + 1] - a[r] + 1) * x + y <= 2 * (x + y)) {
-      r++;
+  for (int i = 1; i <= n; i++) {
+    t = nextint();
+    while (r && s[r].v < t)
+      ans += s[r].cnt, r--;
+    if (r && s[r].v == t) {
+      ans += s[r].cnt;
+      s[r].cnt++;
+      if (r > 1)
+        ans++;
+    } else {
+      if (r)
+        ans++;
+      s[++r] = {t, 1};
     }
-    ans += (a[r] - a[i] + 1) * x + y;
   }
   wrtn(ans);
   putc('\n');
+}
+signed main() {
+  int t = nextint();
+  while (t--)
+    solve();
   flush();
 }

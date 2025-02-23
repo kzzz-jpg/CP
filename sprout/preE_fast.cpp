@@ -46,21 +46,47 @@ inline void wrtn(long long x) {
     putc(buf[len]), --len;
   }
 }
-int n;
-int a[1000500];
-long long x, y, ans;
+const int P = 10, P2 = 4;
+int a[2010], pre[4][2010];
+int n, q;
 signed main() {
-  n = nextint();
-  for (int i = 1; i <= n; i++)
-    a[i] = nextint();
-  x = nextint(), y = nextint();
-  for (int i = 1, r = 1; i <= n; i = r + 1, r = i) {
-    while (r + 1 <= n && (a[r + 1] - a[r] + 1) * x + y <= 2 * (x + y)) {
-      r++;
-    }
-    ans += (a[r] - a[i] + 1) * x + y;
+  n = nextint(), q = nextint();
+  for (int i = 1; i <= n; i++) {
+    pre[1][i] = (nextint() % P);
+    pre[2][i] = (pre[1][i] * pre[1][i] % P);
+    pre[3][i] = (pre[1][i] * pre[2][i] % P);
+    pre[0][i] = (pre[1][i] * pre[3][i] % P);
+    pre[1][i] = (pre[1][i] + pre[1][i - 1]) % P;
+    pre[2][i] = (pre[2][i] + pre[2][i - 1]) % P;
+    pre[3][i] = (pre[3][i] + pre[3][i - 1]) % P;
+    pre[0][i] = (pre[0][i] + pre[0][i - 1]) % P;
   }
-  wrtn(ans);
-  putc('\n');
+  /*
+    for (int i = 1; i <= n; i++)
+      wrtn(pre[1][i]), putc(" \n"[i == n]);
+    for (int i = 1; i <= n; i++)
+      wrtn(pre[2][i]), putc(" \n"[i == n]);
+    for (int i = 1; i <= n; i++)
+      wrtn(pre[3][i]), putc(" \n"[i == n]);
+    for (int i = 1; i <= n; i++)
+      wrtn(pre[0][i]), putc(" \n"[i == n]);
+    */
+  int l, r, k;
+  while (q--) {
+    l = nextint(), r = nextint(), k = nextint();
+    wrtn((pre[k % P2][r] - pre[k % P2][l - 1] + P) % P);
+    putc('\n');
+  }
   flush();
 }
+
+// 1 1 1 1
+// 2 4 8 6
+// 3 9 7 1
+// 4 6 4 6
+// 5 5 5 5
+// 6 6 6 6
+// 7 9 3 1
+// 8 4 2 6
+// 9 1 9 1
+// 0 0 0 0
