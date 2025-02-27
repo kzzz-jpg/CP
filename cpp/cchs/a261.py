@@ -1,0 +1,1 @@
+print('\n'.join((lambda op,a,b,c: f"{(13.7*c+5.0*b-6.8*a+66) if op==1 else (9.6*c+1.8*b-4.7*a+655):.2f}")(*map(int,input().split())) for _ in range(int(input()))))

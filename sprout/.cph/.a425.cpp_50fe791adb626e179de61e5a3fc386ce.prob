@@ -1,0 +1,1 @@
+{"name":"Local: a425","url":"d:\\CP\\sprout\\a425.cpp","tests":[{"id":1740322309069,"input":"3\n1 1 1","output":""},{"id":1740322471830,"input":"5\n7 6 5 6 7","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\sprout\\a425.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+print((lambda a,b,c: "No real root" if b*b-4*a*c<0 else f"Two same roots \n{(-b+(b*b-4*a*c)**0.5)/2}" if b*b-4*a*c==0 else f"Two different roots \n{(-b+(b*b-4*a*c)**0.5)/2} {(-b-(b*b-4*a*c)**0.5)/2}")(*map(int,input().split())))

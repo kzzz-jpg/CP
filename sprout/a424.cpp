@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define re register
 #define putc putcr
 const int S = 1 << 20; // buffer size
 char _buf[1<<20], *_p = _buf, *_q = _buf;
@@ -9,7 +8,7 @@ static inline char readchar() {
   return *_p++;
 }
 static inline int nextint() {
-  re int x = 0, c = readchar(), neg = 0;
+  int x = 0, c = readchar(), neg = 0;
   while (('0' > c || c > '9') && c != '-' && c != EOF)
     c = readchar();
   if (c == '-')
@@ -31,7 +30,7 @@ static inline void putcr(const char x) {
   buffer[++p1] = x;
 }
 static inline void wrtn(int x) {
-  re int len = -1;
+  int len = -1;
   if (x >= 0) {
     do {
       buf[++len] = x % 10 + 48, x /= 10;
@@ -46,47 +45,25 @@ static inline void wrtn(int x) {
     putc(buf[len]), --len;
   }
 }
-short a[100010];
-int n;
-short q[100010], s[100010];
-int ql, qr, sr;
-static inline void solve() {
-  ql = 1;
-  qr = sr = 0;
-  n = nextint();
-  for (re int i = 1; i <= n; i++)
-    q[++qr] = i, a[i] = nextint();
-  for (re int i = 1; i <= n; i++) {
-    if (sr && s[sr] == a[i]) {
-      sr--;
-    } else {
-      if (ql > qr) {
-        putc('N');
-        putc('o');
-        putc('\n');
-        return;
-      }
-      while (ql <= qr && (sr == 0 || s[sr] ^ a[i])) {
-        s[++sr] = q[ql++];
-      }
-      if (sr == 0 || s[sr] ^ a[i]) {
-        putc('N');
-        putc('o');
-        putc('\n');
-        return;
-      } else {
-        sr--;
-      }
+int n,s[200010],r,x;
+signed main(){
+    n=nextint();
+    for(register int i=1;i<=n;i++) {
+        x=nextint();
+        if(x<0) {
+            if(r==0||s[r]!=-x){
+                putc('l'),putc('o'),putc('s'),putc('e'),putc(' '),putc('l'),putc('i'),putc('g'),putc('h'),putc('t'),putc(' '),putc('l'),putc('i'),putc('g'),putc('h'),putc('t');
+                flush();
+                return 0;
+            }else r--;
+        }else s[++r]=x;
     }
-  }
-  putc('Y');
-  putc('e');
-  putc('s');
-  putc('\n');
-}
-signed main() {
-  re int t = nextint();
-  while (t--)
-    solve();
-  flush();
+    if(r) putc('l'),putc('o'),putc('s'),putc('e'),putc(' '),putc('l'),putc('i'),putc('g'),putc('h'),putc('t'),putc(' '),putc('l'),putc('i'),putc('g'),putc('h'),putc('t');
+    else{
+        putc('w');
+        putc('e');
+        putc('e');
+        putc('d');
+    }
+    flush();
 }

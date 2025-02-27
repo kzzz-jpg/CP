@@ -1,0 +1,1 @@
+{"name":"Local: a129","url":"d:\\CP\\cpp\\cchs\\a129.cpp","tests":[{"id":1739195916544,"input":"2 2 2\n1 1 1\n2 2 10\n1 2 100\n2 1 1","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\cchs\\a129.cpp","group":"local","local":true}

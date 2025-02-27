@@ -1,0 +1,1 @@
+{"name":"Local: 2936","url":"d:\\CP\\cpp\\luogu\\2936.cpp","tests":[{"id":1739536440712,"input":"5 \nA B 3 \nB C 3 \nC D 5 \nD Z 4 \nB Z 6 \n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\luogu\\2936.cpp","group":"local","local":true}

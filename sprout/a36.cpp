@@ -1,20 +1,20 @@
-#include <cstdio>
+#include <stdio.h>
 int t, l, op, n, r;
 int q[100010];
-inline char readchar() {
-  const int S = 1 << 20; // buffer size
-  static char buf[S], *p = buf, *q = buf;
-  if (p == q && (q = (p = buf) + fread(buf, 1, S, stdin)) == buf)
+#define putc putcr
+const int S = 1 << 10; // buffer size
+char _buf[1<<10], *_p = _buf, *_q = _buf;
+static inline char readchar() {
+  if (_p == _q && (_q = (_p = _buf) + fread(_buf, 1, S, stdin)) == _buf)
     return EOF;
-  return *p++;
+  return *_p++;
 }
-
-inline int nextint() {
-  int x = 0, c = readchar(), neg = false;
+static inline int nextint() {
+  int x = 0, c = readchar(), neg = 0;
   while (('0' > c || c > '9') && c != '-' && c != EOF)
     c = readchar();
   if (c == '-')
-    neg = true, c = readchar();
+    neg = 1, c = readchar();
   while ('0' <= c && c <= '9')
     x = x * 10 + (c ^ '0'), c = readchar();
   if (neg)
@@ -22,17 +22,17 @@ inline int nextint() {
   return x;
 }
 char buffer[1 << 21];
+char buf[15];
 int p1 = -1;
 const int p2 = (1 << 21) - 1;
-inline void flush() { fwrite(buffer, 1, p1 + 1, stdout), p1 = -1; }
-inline void putc(const char &x) {
+static inline void flush() { fwrite(buffer, 1, p1 + 1, stdout), p1 = -1; }
+static inline void putcr(const char x) {
   if (p1 == p2)
     flush();
   buffer[++p1] = x;
 }
-inline void wrtn(int x) {
-  static char buf[15];
-  static int len = -1;
+static inline void wrtn(int x) {
+  int len = -1;
   if (x >= 0) {
     do {
       buf[++len] = x % 10 + 48, x /= 10;

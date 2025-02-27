@@ -1,0 +1,1 @@
+{"name":"Local: a365","url":"d:\\CP\\cpp\\cchs\\a365.cpp","tests":[{"id":1740148065789,"input":"4\n1 100 1\n4 6 3\n6 10 2\n30 2201 19","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\cpp\\cchs\\a365.cpp","group":"local","local":true}

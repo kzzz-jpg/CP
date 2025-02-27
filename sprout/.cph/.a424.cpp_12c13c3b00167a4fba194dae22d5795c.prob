@@ -1,0 +1,1 @@
+{"name":"Local: a424","url":"d:\\CP\\sprout\\a424.cpp","tests":[{"id":1740321256895,"input":"8\n1 2 1 -1 1 -1 -2 -1","output":""},{"id":1740321267738,"input":"2\n-1 1","output":"lose light light"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\sprout\\a424.cpp","group":"local","local":true}
