@@ -1,0 +1,1 @@
+{"name":"Local: abc395c","url":"d:\\CP\\abc395c.cpp","tests":[{"id":1740925958452,"input":"5\n3 9 5 3 1\n","output":""},{"id":1740925968891,"input":"4\n2 5 3 1\n","output":""},{"id":1740925973164,"input":"10\n1 1 2 3 5 8 13 21 34 55\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CP\\abc395c.cpp","group":"local","local":true}
