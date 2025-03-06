@@ -1,6 +1,4 @@
-1 3 6 0 5
-1 5 4 0 5
-1 9 6 0 5
-1 7 8 4 9
-8
-9
+queue 3 is empty!
+queue 1: empty
+queue 2: 1 2
+queue 3: 6 3 4
