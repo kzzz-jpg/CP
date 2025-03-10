@@ -4,15 +4,15 @@ using namespace std;
 int n, a[200500];
 int tr[200500][2];
 int i;
-void build(int id, int par) {
-  // cerr << id << ' ' << a[id] << '\n';
+void build(int id, int par,int fafa,int lr) {
+   cerr << id << ' ' << a[id] << '\n';
   if (i + 1 <= n && a[i + 1] <= a[id]) {
     tr[id][0] = ++i;
-    build(i, id);
+    build(i, id,par,0);
   }
-  if (i + 1 <= n && a[i + 1] >= a[id] && (par == -1 || a[i + 1] <= a[par])) {
+  if (i + 1 <= n && a[i + 1] >= a[id]) {
     tr[id][1] = ++i;
-    build(i, id);
+    build(i, id,par,1);
   }
 }
 void dfs(int id) {
@@ -31,6 +31,7 @@ signed main() {
   cin >> n;
   for (int i = 1; i <= n; i++)
     cin >> a[i];
-  build(i = 1, -1);
+  build(i = 1, -1,-1,0);
   dfs(1);
+  for(int i=1;i<=n;i++) cerr<<tr[i][0]<<' '<<tr[i][1]<<'\n';
 }
