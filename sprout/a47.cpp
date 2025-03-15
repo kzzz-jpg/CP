@@ -1,26 +1,24 @@
 #include <bits/stdc++.h>
 #define DEBUG
 using namespace std;
+int head, cnt;
 int n, a[200500];
-int tr[200500][2];
-int i;
-void build(int id, int par,int fafa,int lr) {
-   cerr << id << ' ' << a[id] << '\n';
-  if (i + 1 <= n && a[i + 1] <= a[id]) {
-    tr[id][0] = ++i;
-    build(i, id,par,0);
-  }
-  if (i + 1 <= n && a[i + 1] >= a[id]) {
-    tr[id][1] = ++i;
-    build(i, id,par,1);
-  }
+int tr[200500][3];
+int add(int i, int x) {
+  if (i == 0)
+    tr[++cnt][2] = x, i = cnt;
+  else if (x > tr[i][2])
+    tr[i][1] = add(tr[i][1], x);
+  else
+    tr[i][0] = add(tr[i][0], x);
+  return i;
 }
 void dfs(int id) {
   if (id == 0)
     return;
   dfs(tr[id][0]);
   dfs(tr[id][1]);
-  cout << a[id] << '\n';
+  cout << tr[id][2] << '\n';
 }
 signed main() {
 #ifdef DEBUG
@@ -30,8 +28,6 @@ signed main() {
 #endif
   cin >> n;
   for (int i = 1; i <= n; i++)
-    cin >> a[i];
-  build(i = 1, -1,-1,0);
-  dfs(1);
-  for(int i=1;i<=n;i++) cerr<<tr[i][0]<<' '<<tr[i][1]<<'\n';
+    cin >> a[i], head = add(head, a[i]);
+  dfs(head);
 }
